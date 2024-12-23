@@ -4,14 +4,20 @@ document.getElementById('generateButton').addEventListener('click', function() {
 });
 
 
+// 로또 번호를 생성하는 함수
 function generateLottoNumbers() {
     const numarr = [];
-    while (numarr.length < 6){
-        const randomNum = Math.floor(Math.random()*45) + 1;
+    
+    // 배열에 6개의 고유 번호가 들어갈 때까지 반복
+    while (numarr.length < 6) {
+        // 1부터 45까지의 랜덤 번호 생성
+        const randomNum = Math.floor(Math.random() * 45) + 1;
 
-        if(!numarr.includes(randomNum)){
+        // 생성된 랜덤 번호가 배열에 이미 존재하지 않으면 추가
+        if (!numarr.includes(randomNum)) {
             numarr.push(randomNum);
         }
     }
+    
     return numarr;
 }
