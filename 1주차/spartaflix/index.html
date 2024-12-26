@@ -68,9 +68,18 @@
       }
     </style>
     <script>
+      $(document).ready(function () {
+        let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
+        fetch(url).then((res) => res.json()).then((data) => {
+            let temp = data['temp']
+            $('#msg').text(temp)
+          });
+      });
+
       function openclose(){
         $('#postingbox').toggle();
       }
+
       function makeCard(){
         let image = $('#image').val();
         let title = $('#title').val();
@@ -128,6 +137,9 @@
             <li><a href="#" class="nav-link px-2 text-white">영화</a></li>
             <li>
               <a href="#" class="nav-link px-2 text-white">내가 찜한 콘텐츠</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 text-white">현재기온: <span id="msg"></span>도</a>
             </li>
           </ul>
 
