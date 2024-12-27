@@ -1,4 +1,6 @@
 ### SpartaBootcamp 실습 레포지토리🍀
+Read me 작성 & Github & 실습을 위한 레포지토리입니다 !
+
 
 ![image](https://github.com/user-attachments/assets/058ab9ab-d4fd-471b-8c1f-254cec07ca07)
 
